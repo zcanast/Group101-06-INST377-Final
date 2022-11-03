@@ -92,7 +92,7 @@
     /* this will push other blocks out of the way */
   
     /* colors */
-    background-color: #ffe08a;
+    background-color: #8ad4ff;
     color: #4a4a4a;
   
     /* shapes */
@@ -128,14 +128,14 @@
   }
   
   .left_section {
-    background-color: rgba(0, 139, 139, 0.8);
+    background-color: rgba(255, 208, 238, 0.8);
     flex: 0 1 auto;
     margin: 1rem;
     padding: 1.5rem;
   }
   
   .right_section {
-    background-color: rgba(255, 224, 138, 0.7);
+    background-color: rgba(255, 208, 238, 0.8);
     flex: 1 2 auto;
     margin: 1rem;
     align-items: center;
@@ -151,7 +151,7 @@
   .footer {
     flex-shrink: 0;
     padding: 1rem;
-    background-color: rgba(0, 139, 139, 0.8);
+    background-color: #8ad4ff;
     font-size: 1.2rem;
     font-weight: 600;
   }

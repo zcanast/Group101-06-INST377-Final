@@ -8,7 +8,7 @@
 */
 
 html {
-  background-color: rgb(64, 198, 255);
+  background-color: rgb(234, 239, 241);
   font-size: 16px;
   min-width: 300px;
   overflow-x: hidden;
@@ -30,7 +30,7 @@ body {
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  background-color: rgb(189, 229, 255);
+  background-color: rgb(197, 232, 255);
 }
 
 
@@ -92,7 +92,7 @@ form {
   /* this will push other blocks out of the way */
 
   /* colors */
-  background-color: #9d8aff;
+  background-color: #8ab3ff;
   color: #ffffff;
 
   /* shapes */
@@ -103,7 +103,7 @@ form {
 
 
   /* box-shadows are fancy */
-  box-shadow: 0 0.5em 1em -0.125em rgba(138, 92, 255, 0.777), 0 0 0 1px rgb(50, 102, 255);
+  box-shadow: 0 0.5em 1em -0.125em rgba(136, 229, 248, 0.777), 0 0 0 1px rgb(50, 102, 255);
 }
 
 
@@ -117,8 +117,8 @@ form {
 */
 
 .box {
-  background-color: rgb(204, 255, 212);
-  border: 2px dashed;
+  background-color: rgb(235, 235, 235);
+  border: 2px;
   border-radius: 4px;
 
   width: fit-content;
@@ -128,14 +128,14 @@ form {
 }
 
 .left_section {
-  background-color: rgb(255, 195, 243);
+  background-color: #8ab3ff;
   flex: 0 1 auto;
   margin: 1rem;
   padding: 1.5rem;
 }
 
 .right_section {
-  background-color: rgb(255, 195, 243);
+  background-color: #8ab3ff;
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;

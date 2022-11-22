@@ -1,16 +1,3 @@
-/* eslint-disable max-len */
-
-/*
-  Hook this script to index.html
-  by adding `<script src="script.js">` just before your closing `</body>` tag
-*/
-
-/*
-  ## Utility Functions
-    Under this comment place any utility functions you need - like an inclusive random number selector
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-*/
-
 function getRandomInclusive(min, max) {
     const newMin = Math.ceil(min);
     const newMax = Math.floor(max);
@@ -46,8 +33,8 @@ function getRandomInclusive(min, max) {
     */
   }
   
-  function processRestaurants(list) {
-    console.log('fired restaurants list');
+  function processCrimes(list) {
+    console.log('fired crime list');
     const range = [...Array(15).keys()]; // Special notation to create an array of 15 elements
     const newArray = range.map((item) => {
       const index = getRandomInclusive(0, list.length);
@@ -82,7 +69,7 @@ function getRandomInclusive(min, max) {
     const data = {
       labels: labels,
       datasets: [{
-        label: 'Restaurants By Category',
+        label: 'Crimes By Category',
         backgroundColor: 'rgb(255, 99, 132)',
         borderColor: 'rgb(255, 99, 132',
         data: info
@@ -216,7 +203,7 @@ function getRandomInclusive(min, max) {
       submitEvent.preventDefault();
   
       // This constant will have the value of your 15-restaurant collection when it processes
-      currentList = processRestaurants(chartData);
+      currentList = processCrimes(chartData);
   
       // And this function call will perform the "side effect" of injecting the HTML list for you
       injectHTML(currentList);

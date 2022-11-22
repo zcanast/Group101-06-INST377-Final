@@ -4,37 +4,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Group 101-06 Final Project</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/> -->
+     <link rel="stylesheet" href="style.css" />
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <!-- <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+     crossorigin=""></script> -->
   </head>
   <body>
     <div class="wrapper"> 
-      <header class="header"><h1>Spotify Genre Calculator</h1></header>
+      <header class="header"><h1>PG County Crime</h1></header>
       <div class="container">
         <div class="left_section box">
-          <h2>Most Listened to Genres</h2>
-          <ol class="box">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ol>
+          <!-- left inputs -->
+          <h2>Form Inputs</h2>
+          <form action="/api" class="box main_form">
+              <div>
+                  <label for="resto">Filter Crime List</label>
+                  <input type="text" name="resto" id="resto"/>
+              </div>
+              <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+              <button type="submit" id="get-resto">Change Crimes</button>
+          </form>
         </div>
         <div class="right_section box">
-          <h2>New Songs to Check Out</h2>
-          <div>
-            Based on the genres you listen to least, here are 5 new songs you can check out!
+          <h2>Local Crime Map</h2>
+
+          <div class="chart_container"> 
+            <canvas id="myChart"></canvas>
           </div>
-          <ol class="box">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ol>
+
+          <!-- <div id="map"></div> -->
+          <div class="box" id="restaurant_list">
+              <!-- description box -->
+              A list of restaurants from an API
+          </div>
         </div>
       </div>
     </div>
+
     <footer class="footer"><a href="https://github.com/zcanast/zcanast.github.io" target="_blank" rel="noopener noreferrer">Group 101-06: Zoey Anastasiadis and David Franceschi</a></footer>
     <script src="script.js"></script>
   </body>

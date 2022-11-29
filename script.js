@@ -16,7 +16,8 @@ function injectHTML(list) {
 
   list.forEach((item) => {
     const el = document.createElement('li');
-    el.innerText = item.name;
+    el.innerText = (item.clearance_code_inc_type + " " + item.incident_case_id);
+    //el.innerText = (item.clearance_code_inc_type);
     listEl.appendChild(el);
   });
   /*
@@ -116,18 +117,10 @@ function shapeDataForLineChart(array) {
   }, {});
 }
 
-async function getData() {
-  const url = 'https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json'; // remote URL! you can test it in your browser
-  const data = await fetch(url); // We're using a library that mimics a browser 'fetch' for simplicity
-  const json = await data.json(); // the data isn't json until we access it using dot notation
-  const reply = json.filter((item) => Boolean(item.geocoded_column_10)).filter((item) => Boolean(item.location));
-  return reply;
-}
-
 function filterList(list, filterInputValue) {
   return list.filter((item) => {
-    if (!item.name) { return; }
-    const lowerCaseName = item.name.toLowerCase();
+    if (!item.clearance_code_inc_type || !item.incident_case_id) { return; }
+    const lowerCaseName = item.clearance_code_inc_type.toLowerCase();
     const lowerCaseQuery = filterInputValue.toLowerCase();
     return lowerCaseName.includes(lowerCaseQuery);
   });
@@ -151,12 +144,21 @@ function markerPlace(array, map) {
   });
 
   array.forEach((item, index) => {
-    const {coordinates} = item.geocoded_column_1;
-    L.marker([coordinates[1], coordinates[0]]).addTo(map);
+    //const {coordinates} = item.geocoded_column_0;
+    L.marker([item.latitude, item.longitude]).addTo(map);
     if (index === 0) {
-      map.setView([coordinates[1], coordinates[0]], 10);
+      map.setView([item.latitude, item.longitude], 10);
     }
   });
+}
+
+async function getData() {
+  const url = 'https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json'; // remote URL! you can test it in your browser
+  const data = await fetch(url); // We're using a library that mimics a browser 'fetch' for simplicity
+  const json = await data.json(); // the data isn't json until we access it using dot notation
+  // const reply = json.filter((item) => Boolean(item.geocoded_column_0)).filter((item) => Boolean(item.incident_case_id));
+  // return reply;
+  return json;
 }
 
 async function mainEventlab9() {
@@ -252,7 +254,7 @@ async function mainEvent() {
 
   // in your browser console, try expanding this object to see what fields are available to work with
   // for example: arrayFromJson.data[0].name, etc
-  console.log(results[0]);
+  console.log(results[0].latitude);
 
   // this is called "string interpolation" and is how we build large text blocks with variables
   // console.log(`${arrayFromJson.data[0].name} ${arrayFromJson.data[0].category}`);

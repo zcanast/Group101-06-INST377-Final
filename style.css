@@ -25,7 +25,7 @@ body {
   font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  background-color: rgb(197, 232, 255);
+  background-color: rgb(233, 233, 233);
 }
 
 
@@ -69,13 +69,13 @@ form {
 
 .header h1 {
   display: block;
-  background-color: #8ab3ff;
-  color: #ffffff;
+  background-color: #b3b2b2;
+  color: #000000;
   border-radius: 6px;
   font-size: 1.5rem;
   padding: 1.25rem;
   margin:0;
-  box-shadow: 0 0.5em 1em -0.125em rgba(136, 229, 248, 0.777), 0 0 0 1px rgb(50, 102, 255);
+  box-shadow: 0 0.5em 1em -0.125em rgba(206, 206, 206, 0.777), 0 0 0 1px rgb(193, 193, 193);
 }
 
 .box {
@@ -90,14 +90,14 @@ form {
 }
 
 .left_section {
-  background-color: #8ab3ff;
+  background-color: #b3b2b2;
   flex: 0 1 auto;
   margin: 1rem;
   padding: 1.5rem;
 }
 
 .right_section {
-  background-color: #8ab3ff;
+  background-color: #b3b2b2;
   flex: 1 2 auto;
   margin: 1rem;
   align-items: center;
@@ -110,7 +110,7 @@ form {
 .footer {
   flex-shrink: 0;
   padding: 1rem;
-  background-color: #8ab3ff;
+  background-color: #b3b2b2;
   font-size: 1.2rem;
   font-weight: 600;
 }

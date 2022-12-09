@@ -16,14 +16,14 @@ function injectHTML(list) {
 
   list.forEach((item) => {
     const el = document.createElement('li');
-    el.innerText = (item.clearance_code_inc_type + " " + item.incident_case_id);
+    el.innerText = (item.clearance_code_inc_type + " (" + item.incident_case_id + ")");
     listEl.appendChild(el);
   });
 }
 
 function processCrimes(list) {
   console.log('fired crime list');
-  const range = [...Array(15).keys()];
+  const range = [...Array(10).keys()];
   const newArray = range.map((item) => {
     const index = getRandomInclusive(0, list.length);
     return list[index];

@@ -125,10 +125,10 @@ function markerPlace(array, map) {
   });
 
   array.forEach((item, index) => {
-    const {coordinates} = item.geocoded_column_1;
-    L.marker([coordinates[1], coordinates[0]]).addTo(map);
+    
+    L.marker(item.latitude, item.longitude).addTo(map);
     if (index === 0) {
-      map.setView([coordinates[1], coordinates[0]], 10);
+      map.setView(item.latitude, item.longitude, 10);
     }
   });
 }

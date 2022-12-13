@@ -4,8 +4,7 @@ https://zcanast.github.io/
 Title of your project:
 Crime In Prince George's County
 
-Description of target browsers (iOS? Android? Which ones? Which vesions?): Commonly used desktop browsers (chrome, safari, firefox)
-
+Description of target browsers (iOS? Android? Which ones? Which vesions?): The target browsers of our project are commonly used desktop browsers (Chrome, Safari, Firefox).
 
 We used the Prince George's County Crime API: https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json
 
@@ -13,6 +12,7 @@ Our project supports a graph of different crime types as well as a map of where 
 
 Our project utilizes Chart.js for the chart and Leaflet for the map.
 
+We used Bootstrap V5.2
 
 What API did you use, link to the API
 

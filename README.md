@@ -8,12 +8,12 @@ Title of your project
 
 Description of target browsers (iOS? Android? Which ones? Which vesions?)
 
-Documentation needs to be written in Markdown (*.md) files, nicely formatted
 
-Description of your project:
+We used the Prince George's County Crime API: https://data.princegeorgescountymd.gov/resource/wb4e-w4nf.json
 
-What API did you use, link to the API
-What visualisations does your project drive?
-What visualisation or other JS libraries does your project use?
+Our project supports a graph of different crime types as well as a map of where the crimes took place.
+
+Our project utilizes Chart.js for the chart and Leaflet for the map.
+
 What CSS frameworks did you use? What version of them?
 What is your actual project trying to display and solve?

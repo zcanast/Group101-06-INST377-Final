@@ -126,9 +126,9 @@ function markerPlace(array, map) {
 
   array.forEach((item, index) => {
     
-    L.marker(item.latitude, item.longitude).addTo(map);
+    L.marker(item.latitude[1], item.longitude[0]).addTo(map);
     if (index === 0) {
-      map.setView(item.latitude, item.longitude, 10);
+      map.setView(item.latitude[1], item.longitude[0], 10);
     }
   });
 }
@@ -165,6 +165,7 @@ async function mainEvent() {
   form.addEventListener('input', (event) => {
     const filteredList = filterList(currentList, event.target.value);
     injectHTML(filteredList);
+    markerPlace(filteredList, pageMap);
     const localData = shapeDataForLineChart(filterList(currentList, event.target.value));
     changeChart(myChart, localData);
   });
@@ -175,6 +176,7 @@ async function mainEvent() {
     currentList = processCrimes(results);
 
     injectHTML(currentList);
+    markerPlace(currentList, pageMap);
     const localData = shapeDataForLineChart(currentList);
     changeChart(myChart, localData);
   });

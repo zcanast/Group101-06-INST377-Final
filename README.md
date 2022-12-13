@@ -1,9 +1,6 @@
 # zcanast.github.io
 https://zcanast.github.io/
 
-
-TO DO:
-
 Title of your project:
 Crime In Prince George's County
 
@@ -18,8 +15,14 @@ Our project utilizes Chart.js for the chart and Leaflet for the map.
 
 
 What API did you use, link to the API
+
 What visualisations does your project drive?
+
 What visualisation or other JS libraries does your project use?
-What CSS frameworks did you use? What version of them? Bootstrap V5.2
-What is your actual project trying to display and solve? It is trying to show where crimes take place and thier frequency in order for people to make visual inferences about what crimes occur in PG county and where they have happened.
+
+What CSS frameworks did you use? What version of them? 
+Bootstrap V5.2
+
+What is your actual project trying to display and solve? 
+It is trying to show where crimes take place and thier frequency in order for people to make visual inferences about what crimes occur in PG county and where they have happened.
 

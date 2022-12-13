@@ -126,9 +126,9 @@ function markerPlace(array, map) {
 
   array.forEach((item, index) => {
     
-    L.marker(item.latitude[1], item.longitude[0]).addTo(map);
+    L.marker([item.latitude, item.longitude]).addTo(map);
     if (index === 0) {
-      map.setView(item.latitude[1], item.longitude[0], 10);
+      map.setView([item.latitude, item.longitude], 10);
     }
   });
 }

@@ -116,7 +116,7 @@ async function getData() {
 }
 
 async function mainEvent() {
-
+  const pageMap = initMap();
   const form = document.querySelector('.main_form');
   const submit = document.querySelector('#get-resto');
   const loadAnimation = document.querySelector('.lds-ellipsis');
@@ -153,5 +153,32 @@ async function mainEvent() {
     changeChart(myChart, localData);
   });
 }
+
+function initMap() {
+  console.log('initMap');
+  const map = L.map('map').setView([38.98, -76.94], 13);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  return map;
+}
+
+function markerPlace(array, map) {
+  map.eachLayer((layer) => {
+    if (layer instanceof L.Marker) {
+      layer.remove();
+    }
+  });
+
+  array.forEach((item, index) => {
+    const {coordinates} = item.geocoded_column_1;
+    L.marker([coordinates[1], coordinates[0]]).addTo(map);
+    if (index === 0) {
+      map.setView([coordinates[1], coordinates[0]], 10);
+    }
+  });
+}
+
 
 document.addEventListener('DOMContentLoaded', async () => mainEvent());

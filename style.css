@@ -132,17 +132,18 @@ form {
 }
 
 .grid {
-  display: flex;
+  float: right;
+  display: inline;
   justify-content: space-evenly;
   flex-flow: wrap;
-  width: 350px;
-  height: 350px;
+  width: 50px;
+  height: 50px;
   margin: 0 auto;
 }
 
 .grid img {
-  width: 150px;
-  height: 150px;
+  width: 40px;
+  height: 40px;
 }
 
 div.carousel {
@@ -224,7 +225,7 @@ form input {
 
 @media only screen and (max-width: 736px){
     .container {
-      background-color: rgba(255, 242, 176, 0.65);
+      background-color: rgb(235, 235, 235);
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -236,7 +237,7 @@ form input {
   display: block;
   width: 400px;
   height: 380px;
-  border: 2px dashed rgb(99,99,99);
+  border: 2px;
   margin-bottom: 1rem; 
 }
 
@@ -304,4 +305,5 @@ form input {
   .chart_container {
     height: 100%;
     width: 100%;
+    margin: 1.5rem;
   }

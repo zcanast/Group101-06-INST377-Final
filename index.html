@@ -15,10 +15,10 @@
   </head>
   <body>
     <div class="wrapper"> 
-      <header class="header"><h1>PG County Crime</h1></header>
+      <header class="header"><h1>Crime in Prince George's County, Maryland</h1></header>
       <div class="container">
         <div class="left_section box">
-          <h2>Form Inputs</h2>
+          <h3>Form Inputs</h3>
           <form action="/api" class="box main_form">
               <div>
                   <label for="resto">Filter Crime List</label>
@@ -30,20 +30,25 @@
         </div>
         <div class="right_section box">
           <h3>Crime Map</h3>
-          <div id="map"></div></div>
+          <div id="map"></div>
+        </div>
         <div class="right_section box">
-          <h2>Distribution of Local Crime</h2>
-          <div class="chart_container"> 
-            <canvas id="myChart"></canvas>
-          </div>
-          <div class="box" id="crime_list">
-              A list of crimes from the PG County Crime database
-          </div>
+          <h3>Distribution of Local Crime</h3>
+            <div class="box chart_container"> 
+              <canvas id="myChart"></canvas>
+            </div>
+            <div class="box" id="crime_list">
+                A list of crimes from the PG County Crime database
+            </div>
         </div>
       </div>
     </div>
-
-    <footer class="footer"><a href="https://github.com/zcanast/zcanast.github.io" target="_blank" rel="noopener noreferrer">Group 101-06: Zoey Anastasiadis and David Franceschi</a></footer>
+    <footer class="footer">
+      <a href="https://github.com/zcanast/zcanast.github.io" target="_blank" rel="noopener noreferrer">Group 101-06: Zoey Anastasiadis and David Franceschi</a>
+      <div class="grid img">
+        <img src="pgdata.png" alt="The PG County Open Data logo">
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

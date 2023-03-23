@@ -126,7 +126,7 @@ function markerPlace(array, map) {
 
   array.forEach((item, index) => {
     
-    L.marker([item.latitude, item.longitude]).addTo(map);
+    L.marker([item.latitude, item.longitude]).addTo(map).bindPopup(title=item.clearance_code_inc_type);
     if (index === 0) {
       map.setView([item.latitude, item.longitude], 10);
     }

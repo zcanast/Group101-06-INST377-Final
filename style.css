@@ -218,6 +218,8 @@ form input {
     width: -moz-available;          /* WebKit-based browsers will ignore this. */
     width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
     width: fill-available;
+    text-align: center;
+    font-weight: bold;
     align-items: flex-start;
     display: block;
     margin-bottom: 0.5rem;
@@ -237,8 +239,9 @@ form input {
   display: block;
   width: 400px;
   height: 400px;
-  border: 2px dashed rgb(99,99,99);
+  border: 2px rgb(99,99,99);
   margin-bottom: 1rem; 
+  border-radius: 4px;
 }
 
 .lds-ellipsis {

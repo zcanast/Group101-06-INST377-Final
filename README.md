@@ -1,5 +1,5 @@
 # zcanast.github.io
-https://zcanast.github.io/
+https://zcanast.github.io/crime-trends/ 
 
 Crime in Prince George's County
 
